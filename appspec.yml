@@ -5,26 +5,24 @@ os: linux
 files:
   - source: index.html
     destination: /var/www/html/
-  - source: scripts/*
-    destination: /tmp/
 hooks:
   ApplicationStop:
-    - location: /tmp/ApplicationStop.sh
+    - location: /scripts/ApplicationStop.sh
       timeout: 10
       runas: root
   BeforeInstall:
-    - location: /tmp/BeforeInstall.sh
+    - location: /scripts/BeforeInstall.sh
       timeout: 10
       runas: root
   AfterInstall:
-    - location: /tmp/AfterInstall.sh
+    - location: /scripts/AfterInstall.sh
       timeout: 10
       runas: root
   ApplicationStart:
-    - location: /tmp/ApplicationStart.sh
+    - location: /scripts/ApplicationStart.sh
       timeout: 10
       runas: root
   ValidateService:
-    - location: /tmp/ApplicationStart.sh
+    - location: /scripts/ApplicationStart.sh
       timeout: 10
       runas: root

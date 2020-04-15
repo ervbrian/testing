@@ -30,4 +30,4 @@ phases:
 
 artifacts:
   files:
-    - target/testing.txt
+    - /var/www/html/index.html

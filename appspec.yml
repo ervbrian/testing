@@ -9,22 +9,22 @@ files:
     destination: scripts/
 hooks:
   ApplicationStop:
-    - location: ApplicationStop.sh
+    - location: scripts/ApplicationStop.sh
       timeout: 10
       runas: root
   BeforeInstall:
-    - location: BeforeInstall.sh
+    - location: scripts/BeforeInstall.sh
       timeout: 10
       runas: root
   AfterInstall:
-    - location: AfterInstall.sh
+    - location: scripts/AfterInstall.sh
       timeout: 10
       runas: root
   ApplicationStart:
-    - location: ApplicationStart.sh
+    - location: scripts/ApplicationStart.sh
       timeout: 10
       runas: root
   ValidateService:
-    - location: ApplicationStart.sh
+    - location: scripts/ApplicationStart.sh
       timeout: 10
       runas: root

@@ -3,6 +3,8 @@ version: 0.1
 files:
   - source: index.html
     destination: /var/www/html/
+  - source: scripts/*
+    destination: scripts/
 
 phases:
   install:
@@ -32,3 +34,4 @@ artifacts:
   files:
     - index.html
     - appspec.yml
+    - scripts/*

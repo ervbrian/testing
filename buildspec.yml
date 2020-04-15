@@ -1,10 +1,15 @@
 version: 0.1
 
+files:
+  - source: index.html
+    destination: /var/www/html/
+
 phases:
   install:
     commands:
       - echo Entered the install phase...
       - yum update -y
+      - yum install nginx -y
     finally:
       - echo This always runs even if the update or install command fails 
   pre_build:
